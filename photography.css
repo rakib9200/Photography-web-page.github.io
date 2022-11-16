@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0 , 0);
+
+body {
+  background: #fff;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  font-size: 5rem;
+  font-family: 'Lobster', cursive;
+  
+}
+
+.wrapper {
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+  color: #eee;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  animation: animation 100s linear infinite;
+}
+
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+
+input{
+            display: none;
+        }
+
+        .tag{
+            font-size: 20px;
+            margin: 1.5em 0px;
+            padding: 5px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            cursor: pointer;
+            background: #efefef;
+            text-decoration: none;
+            color: black;
+            border: 1px solid #ccc;
+        }
+
+        img{
+            max-width: 300px;
+            width: 300px;
+            height: 300px;
+            transition: all .4s ease-in-out;
+        }
+        /*filter CSS */
+
+         #nature:checked ~ .images > img:not([class*='nature']),
+         #birds:checked ~ .images > img:not([class*='birds']),
+         #sea:checked ~ .images > img:not([class*='sea']){
+           width: 0px;
+           height: 0px;
+        }
+
+        #all:checked ~ .all,
+        #nature:checked ~ .tag1, 
+        #birds:checked ~ .tag2,
+        #sea:checked ~ .tag3{
+            background-color: #333333;      
+            color: white;
+        } 
